@@ -217,6 +217,10 @@ input[type="checkbox"] {
     flex-flow: column;
   }
 
+  .button {
+    padding: 12px 32px;
+  }
+
   .background {
     background-size: cover;
     width: 100%;
