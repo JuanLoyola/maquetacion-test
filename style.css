@@ -1,0 +1,396 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+/* navbar */
+
+#nav {
+  display: flex;
+  height: 72px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #fff;
+}
+
+.logo {
+  margin-left: 165px;
+  width: 105px;
+  height: 28px;
+}
+
+.menu {
+  margin-right: 100px;
+}
+
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#nav ul li {
+  margin: 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav ul li a {
+  color: #18191F;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#nav ul .buy a{
+  width: 98px;
+  height: 40px ;
+  background-color: #8C30F5;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav .menu-btn .icon {
+  padding: 0 30px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* responsive navbar */
+
+@media (max-width: 1300px){
+  #nav{
+    height: 88px;
+    padding: 0 40px 0 50px;
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 1300px) {
+  #nav .menu-btn .icon{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  #nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+    background: #fff;
+  }
+  #nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  #nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  #nav ul li a.active,
+  #nav ul li a:hover{
+    background: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width:1034px){
+  #nav{
+    padding: 0px 0px;
+    display:flex;
+    width: 100%;
+  }
+
+  #nav a{
+    font-size: 0.6rem;
+    display:flex;
+    flex-direction: row wrap;
+  }
+}
+
+/* banner One */
+
+#bannerOne {
+  width: 100%;
+  height: 794px;
+  background: #fff;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  width: 540px;
+  height: 356px;
+  margin: 0 30px 0 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 98px;
+}
+
+.subtitle {
+  height: 64px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 16px 0 32px 0;
+}
+
+.button {
+  width: 115px;
+  height: 48px;
+  background-color: #8C30F5;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-image: url('assets/icons/dashboard.png');
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 640px;
+  margin: 77px 0;
+}
+
+/* responsive banner One */
+
+@media screen and (min-width: 320px) and (max-width:1034px){
+  .info {
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-flow: column;
+  }
+
+  .background {
+    background-size: cover;
+    width: 100%;
+  }
+}
+
+/* bannerTwo */
+
+#bannerTwo {
+  width: 100%;
+  height: 502px;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#bannerTwo .title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 64px;
+  margin-top: 64px;
+}
+
+#bannerTwo .content-box {
+  width: 350px;
+  height: 270px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+#bannerTwo .content-box .subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+#bannerTwo .content-box .content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* reponsive bannerTwo */
+
+@media screen and (max-width: 1000px) {
+  #bannerTwo {
+    width: 100%;
+    height: 1078px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    flex-flow: column;
+  }
+}
+
+/* banner Three */
+#bannerThree {
+  width: 100%;
+  height: 375px;
+  background: #8C30F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#bannerThree .title {
+  width: 730px;
+  height: 128px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 64px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+#bannerThree .btn {
+  width: 181px;
+  height: 48px;
+  padding: 12px 32px;
+  color: #8c30f5;
+  text-decoration: none;
+  background-color:#fff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 79px 0;
+}
+
+/* responsive banner three */
+
+@media screen and (max-width: 1300px) {
+  #bannerThree {
+    width: 100%;
+    height: 368px;
+    padding: 16px;
+  }
+  #bannerThree .title {
+    width:328px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  #bannerThree .btn {
+    width: 181px;
+    height: 48px;
+    padding: 12px 32px;
+  }
+}
+
+/* footer */
+
+#footer {
+  width: 100%;
+  height: 72px;
+  background: #0b0d17;
+  color: #d9dbe1;
+}
+
+#footer .row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#footer .logo {
+  margin-left: 165px;
+}
+
+#footer .information {
+  margin: 0 273px;
+}
+
+#footer .socials {
+  margin-right: 165px;
+}
+
+/* responsive footer */
+@media screen and (max-width:1300px) {
+  #footer {
+    height: 156px;
+  }
+
+  #footer .row {
+    flex-flow: column wrap;
+  }
+
+  #footer .logo {
+    margin: 22px 0px;
+    order: 2;
+  }
+
+  #footer .information {
+    margin: 0px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    order: 3;
+  }
+
+  #footer .socials {
+    margin-right: 0px;
+    order: 1;
+  }
+}
